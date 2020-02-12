@@ -1,0 +1,351 @@
+
+*** Running vivado
+    with args -log Block_Design_Ultrasonic_IP_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Block_Design_Ultrasonic_IP_0_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Block_Design_Ultrasonic_IP_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Projects/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top Block_Design_Ultrasonic_IP_0_0 -part xc7z007sclg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8988 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 986.914 ; gain = 234.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Block_Design_Ultrasonic_IP_0_0' [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ip/Block_Design_Ultrasonic_IP_0_0/synth/Block_Design_Ultrasonic_IP_0_0.vhd:85]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'Ultrasonic_IP_v1_0' declared at 'd:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0.vhd:5' bound to instance 'U0' of component 'Ultrasonic_IP_v1_0' [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ip/Block_Design_Ultrasonic_IP_0_0/synth/Block_Design_Ultrasonic_IP_0_0.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'Ultrasonic_IP_v1_0' [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0.vhd:51]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'Ultrasonic_IP_v1_0_S00_AXI' declared at 'd:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:5' bound to instance 'Ultrasonic_IP_v1_0_S00_AXI_inst' of component 'Ultrasonic_IP_v1_0_S00_AXI' [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'Ultrasonic_IP_v1_0_S00_AXI' [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:88]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:234]
+INFO: [Synth 8-226] default block is never used [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:364]
+INFO: [Synth 8-3491] module 'HC_SR04' declared at 'd:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/src/HC_SR04.vhd:5' bound to instance 'axi_HC_SR04' of component 'HC_SR04' [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:398]
+INFO: [Synth 8-638] synthesizing module 'HC_SR04' [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/src/HC_SR04.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'HC_SR04' (1#1) [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/src/HC_SR04.vhd:12]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg0_reg was removed.  [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'Ultrasonic_IP_v1_0_S00_AXI' (2#1) [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0_S00_AXI.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'Ultrasonic_IP_v1_0' (3#1) [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ipshared/109d/hdl/Ultrasonic_IP_v1_0.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'Block_Design_Ultrasonic_IP_0_0' (4#1) [d:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.srcs/sources_1/bd/Block_Design/ip/Block_Design_Ultrasonic_IP_0_0/synth/Block_Design_Ultrasonic_IP_0_0.vhd:85]
+WARNING: [Synth 8-3331] design Ultrasonic_IP_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Ultrasonic_IP_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Ultrasonic_IP_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Ultrasonic_IP_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Ultrasonic_IP_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Ultrasonic_IP_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1062.781 ; gain = 310.176
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1062.781 ; gain = 310.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1062.781 ; gain = 310.176
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1062.781 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1145.367 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.163 . Memory (MB): peak = 1147.766 ; gain = 2.398
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1147.766 ; gain = 395.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1147.766 ; gain = 395.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1147.766 ; gain = 395.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1147.766 ; gain = 395.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     17 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HC_SR04 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module Ultrasonic_IP_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design Block_Design_Ultrasonic_IP_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design Block_Design_Ultrasonic_IP_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design Block_Design_Ultrasonic_IP_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design Block_Design_Ultrasonic_IP_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design Block_Design_Ultrasonic_IP_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design Block_Design_Ultrasonic_IP_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'U0/Ultrasonic_IP_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/Ultrasonic_IP_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Ultrasonic_IP_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/Ultrasonic_IP_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/Ultrasonic_IP_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Ultrasonic_IP_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1147.766 ; gain = 395.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1147.766 ; gain = 395.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1147.766 ; gain = 395.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1162.785 ; gain = 410.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT1   |     2|
+|3     |LUT2   |     2|
+|4     |LUT3   |     5|
+|5     |LUT4   |    20|
+|6     |LUT5   |    38|
+|7     |LUT6   |    28|
+|8     |FDRE   |   189|
+|9     |FDSE   |     3|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------+---------------------------+------+
+|      |Instance                            |Module                     |Cells |
++------+------------------------------------+---------------------------+------+
+|1     |top                                 |                           |   295|
+|2     |  U0                                |Ultrasonic_IP_v1_0         |   295|
+|3     |    Ultrasonic_IP_v1_0_S00_AXI_inst |Ultrasonic_IP_v1_0_S00_AXI |   295|
+|4     |      axi_HC_SR04                   |HC_SR04                    |   100|
++------+------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1167.582 ; gain = 329.992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1167.582 ; gain = 414.977
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1167.582 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1177.957 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 1177.957 ; gain = 696.473
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1177.957 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.runs/Block_Design_Ultrasonic_IP_0_0_synth_1/Block_Design_Ultrasonic_IP_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Block_Design_Ultrasonic_IP_0_0, cache-ID = 1f020824a6c97230
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1177.957 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/Hackster_motor_ultrasonic/Hackster_motor_ultrasonic.runs/Block_Design_Ultrasonic_IP_0_0_synth_1/Block_Design_Ultrasonic_IP_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Block_Design_Ultrasonic_IP_0_0_utilization_synth.rpt -pb Block_Design_Ultrasonic_IP_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 12 21:59:13 2020...

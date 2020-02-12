@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "Ultrasonic_IP.h"
+#include "sleep.h"
+
+int main()
+{
+    init_platform();
+
+    u32 distance;
+
+    print("Testing123\n\r");
+    while (1) {
+    	distance = ULTRASONIC_IP_mReadReg(XPAR_ULTRASONIC_IP_0_S00_AXI_BASEADDR, ULTRASONIC_IP_S00_AXI_SLV_REG0_OFFSET);
+    	printf("Distance: %zu\n\r", distance);
+    	sleep(1);
+    }
+
+    cleanup_platform();
+    return 0;
+}

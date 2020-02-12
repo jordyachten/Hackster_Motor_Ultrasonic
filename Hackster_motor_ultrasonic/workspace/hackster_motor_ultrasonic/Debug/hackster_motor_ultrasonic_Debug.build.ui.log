@@ -1,0 +1,37 @@
+2020-02-12T23:04:18.422986600255-23:04:18 **** Incremental Build of configuration Debug for project hackster_motor_ultrasonic ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/helloworld.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/sw/Block_Design_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-../src/helloworld.c: In function 'main':
+000/hackster_motor_ultrasonic/src/helloworld.c95-1-1format '%u' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]1-../src/helloworld.c:95:22: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+000-   printf("Distance: %u cm\n\r", distance);
+000-                     ~^          ~~~~~~~~
+000-                     %lu
+000/hackster_motor_ultrasonic/src/helloworld.c54-1-1unused variable 'SettingsTable' [-Wunused-variable]1-../src/helloworld.c:54:15: warning: unused variable 'SettingsTable' [-Wunused-variable]
+000-  TmrCntrSetup SettingsTable = {TICK_TIMER_FREQ_HZ, 0, 0, 0};
+000-               ^~~~~~~~~~~~~
+000-../src/helloworld.c: In function 'TickHandler':
+000/hackster_motor_ultrasonic/src/helloworld.c199-1-1variable 'StatusEvent' set but not used [-Wunused-but-set-variable]1-../src/helloworld.c:199:6: warning: variable 'StatusEvent' set but not used [-Wunused-but-set-variable]
+000-  u32 StatusEvent;
+000-      ^~~~~~~~~~~
+000-'Finished building: ../src/helloworld.c'
+000-' '
+000-'Building target: hackster_motor_ultrasonic.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/sw/Block_Design_wrapper/standalone_domain/bsplib/lib -o "hackster_motor_ultrasonic.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: hackster_motor_ultrasonic.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size hackster_motor_ultrasonic.elf  |tee "hackster_motor_ultrasonic.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  70240	   3416	  23440	  97096	  17b48	hackster_motor_ultrasonic.elf
+000-'Finished building: hackster_motor_ultrasonic.elf.size'
+000-' '
+00255-
+23:04:19 Build Finished (took 878ms)
+

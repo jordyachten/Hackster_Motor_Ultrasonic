@@ -1,0 +1,1070 @@
+22:06:53 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\Hackster_motor_ultrasonic\workspace\temp_xsdb_launch_script.tcl
+22:06:59 INFO  : Registering command handlers for Vitis TCF services
+22:07:00 INFO  : XSCT server has started successfully.
+22:07:00 INFO  : plnx-install-location is set to ''
+22:07:00 INFO  : Successfully done setting XSCT server connection channel  
+22:07:11 INFO  : Successfully done setting workspace for the tool. 
+22:07:11 INFO  : Successfully done query RDI_DATADIR 
+22:08:56 INFO  : Successfully done sdx_reload_mss "D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+22:08:56 INFO  : Successfully done sdx_reload_mss "D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+22:09:28 INFO  : (SwPlaform) Successfully done setParamInSpec 
+22:09:30 INFO  : (SwPlaform) Successfully done setParamInSpec 
+22:09:32 INFO  : (SwPlatform) Successfully done update_mss 
+22:09:33 INFO  : Successfully done sdx_reload_mss "D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+22:11:18 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:11:18 INFO  : Updating application flags with new BSP settings...
+22:11:18 INFO  : Successfully updated application flags for project hackster_motor_ultrasonic.
+22:11:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:11:43 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:11:43 INFO  : 'jtag frequency' command is executed.
+22:11:44 INFO  : Context for 'APU' is selected.
+22:11:44 INFO  : System reset is completed.
+22:11:47 INFO  : 'after 3000' command is executed.
+22:11:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:11:48 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:11:48 INFO  : Context for 'APU' is selected.
+22:11:48 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:11:48 INFO  : 'configparams force-mem-access 1' command is executed.
+22:11:48 INFO  : Context for 'APU' is selected.
+22:11:48 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:11:48 INFO  : 'ps7_init' command is executed.
+22:11:49 INFO  : 'ps7_post_config' command is executed.
+22:11:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:49 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:11:49 INFO  : 'configparams force-mem-access 0' command is executed.
+22:11:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:11:49 INFO  : Memory regions updated for context APU
+22:11:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:49 INFO  : 'con' command is executed.
+22:11:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:11:49 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:16:48 INFO  : Disconnected from the channel tcfchan#2.
+22:16:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:16:49 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:16:49 INFO  : 'jtag frequency' command is executed.
+22:16:49 INFO  : Context for 'APU' is selected.
+22:16:49 INFO  : System reset is completed.
+22:16:52 INFO  : 'after 3000' command is executed.
+22:16:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:16:53 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:16:53 INFO  : Context for 'APU' is selected.
+22:16:53 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:16:53 INFO  : 'configparams force-mem-access 1' command is executed.
+22:16:53 INFO  : Context for 'APU' is selected.
+22:16:53 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:16:53 INFO  : 'ps7_init' command is executed.
+22:16:53 INFO  : 'ps7_post_config' command is executed.
+22:16:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:16:54 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:16:54 INFO  : 'configparams force-mem-access 0' command is executed.
+22:16:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:16:54 INFO  : Memory regions updated for context APU
+22:16:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:16:54 INFO  : 'con' command is executed.
+22:16:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:16:54 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:17:21 INFO  : Disconnected from the channel tcfchan#3.
+22:17:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:17:22 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:17:22 INFO  : 'jtag frequency' command is executed.
+22:17:22 INFO  : Context for 'APU' is selected.
+22:17:22 INFO  : System reset is completed.
+22:17:25 INFO  : 'after 3000' command is executed.
+22:17:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:17:26 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:17:26 INFO  : Context for 'APU' is selected.
+22:17:26 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:17:26 INFO  : 'configparams force-mem-access 1' command is executed.
+22:17:26 INFO  : Context for 'APU' is selected.
+22:17:26 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:17:27 INFO  : 'ps7_init' command is executed.
+22:17:27 INFO  : 'ps7_post_config' command is executed.
+22:17:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:17:27 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:17:27 INFO  : 'configparams force-mem-access 0' command is executed.
+22:17:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:17:27 INFO  : Memory regions updated for context APU
+22:17:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:17:27 INFO  : 'con' command is executed.
+22:17:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:17:27 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:18:48 INFO  : Disconnected from the channel tcfchan#4.
+22:18:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:18:48 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:18:48 INFO  : 'jtag frequency' command is executed.
+22:18:48 INFO  : Context for 'APU' is selected.
+22:18:48 INFO  : System reset is completed.
+22:18:51 INFO  : 'after 3000' command is executed.
+22:18:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:18:52 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:18:52 INFO  : Context for 'APU' is selected.
+22:18:52 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:18:52 INFO  : 'configparams force-mem-access 1' command is executed.
+22:18:52 INFO  : Context for 'APU' is selected.
+22:18:52 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:18:53 INFO  : 'ps7_init' command is executed.
+22:18:53 INFO  : 'ps7_post_config' command is executed.
+22:18:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:18:53 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:18:53 INFO  : 'configparams force-mem-access 0' command is executed.
+22:18:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:18:53 INFO  : Memory regions updated for context APU
+22:18:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:18:53 INFO  : 'con' command is executed.
+22:18:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:18:53 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:19:29 INFO  : Disconnected from the channel tcfchan#5.
+22:19:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:19:29 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:19:30 INFO  : 'jtag frequency' command is executed.
+22:19:30 INFO  : Context for 'APU' is selected.
+22:19:30 INFO  : System reset is completed.
+22:19:33 INFO  : 'after 3000' command is executed.
+22:19:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:19:34 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:19:34 INFO  : Context for 'APU' is selected.
+22:19:34 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:19:34 INFO  : 'configparams force-mem-access 1' command is executed.
+22:19:34 INFO  : Context for 'APU' is selected.
+22:19:34 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:19:34 INFO  : 'ps7_init' command is executed.
+22:19:34 INFO  : 'ps7_post_config' command is executed.
+22:19:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:19:35 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:19:35 INFO  : 'configparams force-mem-access 0' command is executed.
+22:19:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:19:35 INFO  : Memory regions updated for context APU
+22:19:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:19:35 INFO  : 'con' command is executed.
+22:19:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:19:35 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:20:16 INFO  : Disconnected from the channel tcfchan#6.
+22:20:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:20:16 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:20:16 INFO  : 'jtag frequency' command is executed.
+22:20:16 INFO  : Context for 'APU' is selected.
+22:20:16 INFO  : System reset is completed.
+22:20:19 INFO  : 'after 3000' command is executed.
+22:20:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:20:20 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:20:20 INFO  : Context for 'APU' is selected.
+22:20:20 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:20:21 INFO  : 'configparams force-mem-access 1' command is executed.
+22:20:21 INFO  : Context for 'APU' is selected.
+22:20:21 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:20:21 INFO  : 'ps7_init' command is executed.
+22:20:21 INFO  : 'ps7_post_config' command is executed.
+22:20:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:20:21 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:20:21 INFO  : 'configparams force-mem-access 0' command is executed.
+22:20:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:20:21 INFO  : Memory regions updated for context APU
+22:20:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:20:21 INFO  : 'con' command is executed.
+22:20:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:20:21 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:20:53 INFO  : Disconnected from the channel tcfchan#7.
+22:20:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:20:54 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:20:54 INFO  : 'jtag frequency' command is executed.
+22:20:54 INFO  : Context for 'APU' is selected.
+22:20:54 INFO  : System reset is completed.
+22:20:57 INFO  : 'after 3000' command is executed.
+22:20:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:20:58 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:20:58 INFO  : Context for 'APU' is selected.
+22:20:58 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:20:58 INFO  : 'configparams force-mem-access 1' command is executed.
+22:20:58 INFO  : Context for 'APU' is selected.
+22:20:58 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:20:59 INFO  : 'ps7_init' command is executed.
+22:20:59 INFO  : 'ps7_post_config' command is executed.
+22:20:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:20:59 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:20:59 INFO  : 'configparams force-mem-access 0' command is executed.
+22:20:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:20:59 INFO  : Memory regions updated for context APU
+22:20:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:20:59 INFO  : 'con' command is executed.
+22:20:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:20:59 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:21:23 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:21:48 INFO  : Disconnected from the channel tcfchan#8.
+22:21:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:21:49 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:21:49 INFO  : 'jtag frequency' command is executed.
+22:21:49 INFO  : Context for 'APU' is selected.
+22:21:49 INFO  : System reset is completed.
+22:21:52 INFO  : 'after 3000' command is executed.
+22:21:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:21:53 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:21:53 INFO  : Context for 'APU' is selected.
+22:21:53 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:21:53 INFO  : 'configparams force-mem-access 1' command is executed.
+22:21:53 INFO  : Context for 'APU' is selected.
+22:21:53 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:21:54 INFO  : 'ps7_init' command is executed.
+22:21:54 INFO  : 'ps7_post_config' command is executed.
+22:21:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:21:54 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:21:54 INFO  : 'configparams force-mem-access 0' command is executed.
+22:21:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:21:54 INFO  : Memory regions updated for context APU
+22:21:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:21:54 INFO  : 'con' command is executed.
+22:21:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:21:54 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:22:23 INFO  : Disconnected from the channel tcfchan#9.
+22:22:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:22:24 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:22:24 INFO  : 'jtag frequency' command is executed.
+22:22:24 INFO  : Context for 'APU' is selected.
+22:22:24 INFO  : System reset is completed.
+22:22:27 INFO  : 'after 3000' command is executed.
+22:22:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:22:28 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:22:28 INFO  : Context for 'APU' is selected.
+22:22:28 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:22:28 INFO  : 'configparams force-mem-access 1' command is executed.
+22:22:28 INFO  : Context for 'APU' is selected.
+22:22:28 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:22:29 INFO  : 'ps7_init' command is executed.
+22:22:29 INFO  : 'ps7_post_config' command is executed.
+22:22:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:22:29 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:22:29 INFO  : 'configparams force-mem-access 0' command is executed.
+22:22:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:22:29 INFO  : Memory regions updated for context APU
+22:22:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:22:29 INFO  : 'con' command is executed.
+22:22:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:22:29 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:22:52 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:23:22 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:24:58 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:25:27 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:26:06 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:26:26 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:26:35 INFO  : Disconnected from the channel tcfchan#10.
+22:26:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:26:36 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:26:36 INFO  : 'jtag frequency' command is executed.
+22:26:36 INFO  : Context for 'APU' is selected.
+22:26:36 INFO  : System reset is completed.
+22:26:39 INFO  : 'after 3000' command is executed.
+22:26:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:26:40 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:26:40 INFO  : Context for 'APU' is selected.
+22:26:40 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:26:40 INFO  : 'configparams force-mem-access 1' command is executed.
+22:26:40 INFO  : Context for 'APU' is selected.
+22:26:40 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:26:40 INFO  : 'ps7_init' command is executed.
+22:26:40 INFO  : 'ps7_post_config' command is executed.
+22:26:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:26:41 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:26:41 INFO  : 'configparams force-mem-access 0' command is executed.
+22:26:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:26:41 INFO  : Memory regions updated for context APU
+22:26:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:26:41 INFO  : 'con' command is executed.
+22:26:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:26:41 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:28:16 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:28:23 INFO  : Disconnected from the channel tcfchan#11.
+22:28:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:28:24 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:28:24 INFO  : 'jtag frequency' command is executed.
+22:28:24 INFO  : Context for 'APU' is selected.
+22:28:24 INFO  : System reset is completed.
+22:28:27 INFO  : 'after 3000' command is executed.
+22:28:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:28:28 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:28:28 INFO  : Context for 'APU' is selected.
+22:28:28 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:28:28 INFO  : 'configparams force-mem-access 1' command is executed.
+22:28:28 INFO  : Context for 'APU' is selected.
+22:28:28 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:28:29 INFO  : 'ps7_init' command is executed.
+22:28:29 INFO  : 'ps7_post_config' command is executed.
+22:28:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:28:29 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:28:29 INFO  : 'configparams force-mem-access 0' command is executed.
+22:28:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:28:29 INFO  : Memory regions updated for context APU
+22:28:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:28:29 INFO  : 'con' command is executed.
+22:28:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:28:29 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:38:06 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:43:11 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:44:14 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:44:24 INFO  : Disconnected from the channel tcfchan#12.
+22:44:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:44:24 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:44:24 INFO  : 'jtag frequency' command is executed.
+22:44:24 INFO  : Context for 'APU' is selected.
+22:44:24 INFO  : System reset is completed.
+22:44:27 INFO  : 'after 3000' command is executed.
+22:44:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:44:29 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:44:29 INFO  : Context for 'APU' is selected.
+22:44:29 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:44:29 INFO  : 'configparams force-mem-access 1' command is executed.
+22:44:29 INFO  : Context for 'APU' is selected.
+22:44:29 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:44:29 INFO  : 'ps7_init' command is executed.
+22:44:29 INFO  : 'ps7_post_config' command is executed.
+22:44:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:44:29 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:44:29 INFO  : 'configparams force-mem-access 0' command is executed.
+22:44:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:44:30 INFO  : Memory regions updated for context APU
+22:44:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:44:30 INFO  : 'con' command is executed.
+22:44:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:44:30 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:45:01 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:45:17 INFO  : Disconnected from the channel tcfchan#13.
+22:45:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:45:17 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:45:17 INFO  : 'jtag frequency' command is executed.
+22:45:17 INFO  : Context for 'APU' is selected.
+22:45:17 INFO  : System reset is completed.
+22:45:20 INFO  : 'after 3000' command is executed.
+22:45:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:45:21 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:45:22 INFO  : Context for 'APU' is selected.
+22:45:22 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:45:22 INFO  : 'configparams force-mem-access 1' command is executed.
+22:45:22 INFO  : Context for 'APU' is selected.
+22:45:22 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:45:22 INFO  : 'ps7_init' command is executed.
+22:45:22 INFO  : 'ps7_post_config' command is executed.
+22:45:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:45:22 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:45:22 INFO  : 'configparams force-mem-access 0' command is executed.
+22:45:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:45:22 INFO  : Memory regions updated for context APU
+22:45:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:45:22 INFO  : 'con' command is executed.
+22:45:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:45:22 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:48:41 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:48:53 INFO  : Disconnected from the channel tcfchan#14.
+22:48:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:48:54 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:48:54 INFO  : 'jtag frequency' command is executed.
+22:48:54 INFO  : Context for 'APU' is selected.
+22:48:54 INFO  : System reset is completed.
+22:48:57 INFO  : 'after 3000' command is executed.
+22:48:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:48:58 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:48:58 INFO  : Context for 'APU' is selected.
+22:48:58 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:48:58 INFO  : 'configparams force-mem-access 1' command is executed.
+22:48:58 INFO  : Context for 'APU' is selected.
+22:48:58 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:48:58 INFO  : 'ps7_init' command is executed.
+22:48:58 INFO  : 'ps7_post_config' command is executed.
+22:48:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:48:59 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:48:59 INFO  : 'configparams force-mem-access 0' command is executed.
+22:48:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:48:59 INFO  : Memory regions updated for context APU
+22:48:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:48:59 INFO  : 'con' command is executed.
+22:48:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:48:59 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:50:05 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:50:19 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:50:25 INFO  : Disconnected from the channel tcfchan#15.
+22:50:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:50:26 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:50:26 INFO  : 'jtag frequency' command is executed.
+22:50:26 INFO  : Context for 'APU' is selected.
+22:50:26 INFO  : System reset is completed.
+22:50:29 INFO  : 'after 3000' command is executed.
+22:50:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:50:30 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:50:30 INFO  : Context for 'APU' is selected.
+22:50:30 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:50:30 INFO  : 'configparams force-mem-access 1' command is executed.
+22:50:30 INFO  : Context for 'APU' is selected.
+22:50:30 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:50:30 INFO  : 'ps7_init' command is executed.
+22:50:30 INFO  : 'ps7_post_config' command is executed.
+22:50:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:50:31 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:50:31 INFO  : 'configparams force-mem-access 0' command is executed.
+22:50:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:50:31 INFO  : Memory regions updated for context APU
+22:50:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:50:31 INFO  : 'con' command is executed.
+22:50:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:50:31 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:53:04 INFO  : Disconnected from the channel tcfchan#17.
+22:53:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:53:04 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:53:04 INFO  : 'jtag frequency' command is executed.
+22:53:04 INFO  : Context for 'APU' is selected.
+22:53:04 INFO  : System reset is completed.
+22:53:07 INFO  : 'after 3000' command is executed.
+22:53:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:53:08 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:53:08 INFO  : Context for 'APU' is selected.
+22:53:08 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:53:08 INFO  : 'configparams force-mem-access 1' command is executed.
+22:53:08 INFO  : Context for 'APU' is selected.
+22:53:08 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:53:09 INFO  : 'ps7_init' command is executed.
+22:53:09 INFO  : 'ps7_post_config' command is executed.
+22:53:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:09 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:53:09 INFO  : 'configparams force-mem-access 0' command is executed.
+22:53:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:53:09 INFO  : Memory regions updated for context APU
+22:53:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:09 INFO  : 'con' command is executed.
+22:53:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:53:09 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:53:15 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:53:25 INFO  : Disconnected from the channel tcfchan#18.
+22:53:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:53:25 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:53:25 INFO  : 'jtag frequency' command is executed.
+22:53:25 INFO  : Context for 'APU' is selected.
+22:53:25 INFO  : System reset is completed.
+22:53:28 INFO  : 'after 3000' command is executed.
+22:53:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:53:29 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:53:30 INFO  : Context for 'APU' is selected.
+22:53:30 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:53:30 INFO  : 'configparams force-mem-access 1' command is executed.
+22:53:30 INFO  : Context for 'APU' is selected.
+22:53:30 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:53:30 INFO  : 'ps7_init' command is executed.
+22:53:30 INFO  : 'ps7_post_config' command is executed.
+22:53:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:30 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:53:30 INFO  : 'configparams force-mem-access 0' command is executed.
+22:53:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:53:30 INFO  : Memory regions updated for context APU
+22:53:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:30 INFO  : 'con' command is executed.
+22:53:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:53:30 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:55:11 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:55:20 INFO  : Disconnected from the channel tcfchan#19.
+22:55:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:55:20 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:55:20 INFO  : 'jtag frequency' command is executed.
+22:55:20 INFO  : Context for 'APU' is selected.
+22:55:20 INFO  : System reset is completed.
+22:55:23 INFO  : 'after 3000' command is executed.
+22:55:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:55:24 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:55:25 INFO  : Context for 'APU' is selected.
+22:55:25 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:55:25 INFO  : 'configparams force-mem-access 1' command is executed.
+22:55:25 INFO  : Context for 'APU' is selected.
+22:55:25 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:55:25 INFO  : 'ps7_init' command is executed.
+22:55:25 INFO  : 'ps7_post_config' command is executed.
+22:55:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:25 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:55:25 INFO  : 'configparams force-mem-access 0' command is executed.
+22:55:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:55:25 INFO  : Memory regions updated for context APU
+22:55:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:25 INFO  : 'con' command is executed.
+22:55:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:55:25 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:56:53 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:56:59 INFO  : Disconnected from the channel tcfchan#20.
+22:56:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:56:59 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:56:59 INFO  : 'jtag frequency' command is executed.
+22:56:59 INFO  : Context for 'APU' is selected.
+22:57:00 INFO  : System reset is completed.
+22:57:03 INFO  : 'after 3000' command is executed.
+22:57:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+22:57:04 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+22:57:04 INFO  : Context for 'APU' is selected.
+22:57:04 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+22:57:04 INFO  : 'configparams force-mem-access 1' command is executed.
+22:57:04 INFO  : Context for 'APU' is selected.
+22:57:04 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+22:57:04 INFO  : 'ps7_init' command is executed.
+22:57:04 INFO  : 'ps7_post_config' command is executed.
+22:57:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:57:05 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:57:05 INFO  : 'configparams force-mem-access 0' command is executed.
+22:57:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:57:05 INFO  : Memory regions updated for context APU
+22:57:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:57:05 INFO  : 'con' command is executed.
+22:57:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:57:05 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+22:59:52 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+22:59:57 INFO  : Disconnected from the channel tcfchan#21.
+22:59:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:59:57 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+22:59:57 INFO  : 'jtag frequency' command is executed.
+22:59:57 INFO  : Context for 'APU' is selected.
+22:59:57 INFO  : System reset is completed.
+23:00:00 INFO  : 'after 3000' command is executed.
+23:00:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+23:00:01 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+23:00:01 INFO  : Context for 'APU' is selected.
+23:00:01 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+23:00:01 INFO  : 'configparams force-mem-access 1' command is executed.
+23:00:01 INFO  : Context for 'APU' is selected.
+23:00:01 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+23:00:02 INFO  : 'ps7_init' command is executed.
+23:00:02 INFO  : 'ps7_post_config' command is executed.
+23:00:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:00:02 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:00:02 INFO  : 'configparams force-mem-access 0' command is executed.
+23:00:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:00:02 INFO  : Memory regions updated for context APU
+23:00:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:00:02 INFO  : 'con' command is executed.
+23:00:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:00:02 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+23:02:36 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+23:02:44 INFO  : Disconnected from the channel tcfchan#22.
+23:02:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:45 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+23:02:45 INFO  : 'jtag frequency' command is executed.
+23:02:45 INFO  : Context for 'APU' is selected.
+23:02:45 INFO  : System reset is completed.
+23:02:48 INFO  : 'after 3000' command is executed.
+23:02:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+23:02:49 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+23:02:49 INFO  : Context for 'APU' is selected.
+23:02:49 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+23:02:49 INFO  : 'configparams force-mem-access 1' command is executed.
+23:02:49 INFO  : Context for 'APU' is selected.
+23:02:49 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+23:02:49 INFO  : 'ps7_init' command is executed.
+23:02:49 INFO  : 'ps7_post_config' command is executed.
+23:02:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:50 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:02:50 INFO  : 'configparams force-mem-access 0' command is executed.
+23:02:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:02:50 INFO  : Memory regions updated for context APU
+23:02:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:50 INFO  : 'con' command is executed.
+23:02:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:02:50 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'
+23:04:18 INFO  : Checking for BSP changes to sync application flags for project 'hackster_motor_ultrasonic'...
+23:04:32 INFO  : Disconnected from the channel tcfchan#23.
+23:04:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:04:32 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+23:04:32 INFO  : 'jtag frequency' command is executed.
+23:04:32 INFO  : Context for 'APU' is selected.
+23:04:32 INFO  : System reset is completed.
+23:04:35 INFO  : 'after 3000' command is executed.
+23:04:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+23:04:36 INFO  : FPGA configured successfully with bitstream "D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit"
+23:04:37 INFO  : Context for 'APU' is selected.
+23:04:37 INFO  : Hardware design information is loaded from 'D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa'.
+23:04:37 INFO  : 'configparams force-mem-access 1' command is executed.
+23:04:37 INFO  : Context for 'APU' is selected.
+23:04:37 INFO  : Sourcing of 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl' is done.
+23:04:37 INFO  : 'ps7_init' command is executed.
+23:04:37 INFO  : 'ps7_post_config' command is executed.
+23:04:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:04:37 INFO  : The application 'D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:04:37 INFO  : 'configparams force-mem-access 0' command is executed.
+23:04:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/hw/Block_Design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:04:37 INFO  : Memory regions updated for context APU
+23:04:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:04:37 INFO  : 'con' command is executed.
+23:04:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:04:37 INFO  : Launch script is exported to file 'D:\Projects\Hackster_motor_ultrasonic\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_hackster_motor_ultrasonic_system_standalone.tcl'

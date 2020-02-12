@@ -1,0 +1,10 @@
+22:50:07 **** Build of configuration Debug for project hackster_motor_ultrasonic_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 53327 D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/Block_Design_wrapper.xpfm standalone_domain D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic_system/Debug/system.bif
+sdcard_gen --xpfm D:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/Block_Design_wrapper.xpfm --sys_config Block_Design_wrapper --bif D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic_system/Debug/system.bif --bitstream D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit --elf D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/Debug/hackster_motor_ultrasonic.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic/_ide/bitstream/Block_Design_wrapper.bit
+Running D:/Xilinx/Vitis/2019.2/bin/bootgen  -image D:/Projects/Hackster_motor_ultrasonic/workspace/hackster_motor_ultrasonic_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+22:50:14 Build Finished (took 7s.234ms)
+

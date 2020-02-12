@@ -1,0 +1,4 @@
+timestamp=[2020-02-12 22:06:47], mode=WORKBENCH_START, duration=0:00:10.714, duration_ms=10714, data={}
+timestamp=[2020-02-12 22:06:48], mode=WORKBENCH_UI_INIT, duration=0:00:01.070, duration_ms=1070, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2020-02-12 22:08:42], mode=APP_CREATION, duration=0:00:50.020, duration_ms=50020, data={name=hackster_motor_ultrasonic, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=Block_Design_wrapper, application_type=application}
+timestamp=[2020-02-12 22:11:18], mode=PLATFORM_GENERATION, duration=0:00:56.019, duration_ms=56019, data={name=Block_Design_wrapper}

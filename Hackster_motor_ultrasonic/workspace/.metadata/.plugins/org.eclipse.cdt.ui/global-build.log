@@ -1,0 +1,36 @@
+Nothing to build in platform 'Block_Design_wrapper'
+
+23:04:18 **** Incremental Build of configuration Debug for project hackster_motor_ultrasonic ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/sw/Block_Design_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:95:22: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   printf("Distance: %u cm\n\r", distance);
+                     ~^          ~~~~~~~~
+                     %lu
+../src/helloworld.c:54:15: warning: unused variable 'SettingsTable' [-Wunused-variable]
+  TmrCntrSetup SettingsTable = {TICK_TIMER_FREQ_HZ, 0, 0, 0};
+               ^~~~~~~~~~~~~
+../src/helloworld.c: In function 'TickHandler':
+../src/helloworld.c:199:6: warning: variable 'StatusEvent' set but not used [-Wunused-but-set-variable]
+  u32 StatusEvent;
+      ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hackster_motor_ultrasonic.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Projects/Hackster_motor_ultrasonic/workspace/Block_Design_wrapper/export/Block_Design_wrapper/sw/Block_Design_wrapper/standalone_domain/bsplib/lib -o "hackster_motor_ultrasonic.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hackster_motor_ultrasonic.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hackster_motor_ultrasonic.elf  |tee "hackster_motor_ultrasonic.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70240	   3416	  23440	  97096	  17b48	hackster_motor_ultrasonic.elf
+'Finished building: hackster_motor_ultrasonic.elf.size'
+' '
