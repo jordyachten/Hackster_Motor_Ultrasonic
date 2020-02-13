@@ -1,6 +1,8 @@
 # MiniZed and Vitis for Motor Control with added HC-SR04
 Extension of 'Mini But Mighty, the MiniZed and Vitis for Motor Control' project by Adam Taylor with HC-SR04 to control the speed.
 
+![Image of the project](https://hackster.imgix.net/uploads/attachments/1070580/_ondQ4TRT6m.blob?auto=compress%2Cformat&w=900&h=675&fit=min)
+
 ##Introduction
 After following the 'Mini but Mighty: Motor Control Live Build with the MiniZed' by Adam Taylor, I started thinking about a useful upgrade to this project. When I searched through my sensors, I stumbled upon the well known HC_SR04 ultrasonic distance sensor. The distance sensor would be a useful upgrade if we would for example use the motor to move a toy car. When the sensor detects an object it can make the motor go slower and slower as it comes closer to the object, until it eventually stops.
 
