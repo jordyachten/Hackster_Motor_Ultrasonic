@@ -9,4 +9,5 @@ After following the 'Mini but Mighty: Motor Control Live Build with the MiniZed'
 If we want to make an application in Vitis for the HC_SR04, we need to be able to drive the hardware. For this purpose we have to design a component in VHDL code first. We will then make a custom AXI IP we can add in a block design and connect to the ZYNQ processor. When all this is done, we can export the hardware design and start making an application in Vitis and run it on the MiniZed.
 
 To get the full discription of the project, you can visit my project on Hackster.io.
+
 https://www.hackster.io/jordy-achten/minized-and-vitis-for-motor-control-with-added-hc-sr04-0e82cb
